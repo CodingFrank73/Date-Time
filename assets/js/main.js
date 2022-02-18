@@ -90,17 +90,16 @@ console.log(istWeekend("2, 1, 2020"));
 console.log(istWeekend("29, 2, 2020"));
 
 // ---------------- Aufgabe 1_8 -----------------------
-
-//Zeit zeigen
-// setInterval(function () {
-//     var date = new Date();
-//     var zeit = date.toLocaleTimeString();
-//     console.log(zeit);
-// }, 1000);
-
 function countdown() {
 
+    for (var i = 10; i > 0; i--) {
+        console.log(i);
+    }
+    clearInterval(count)
 }
+
+let count = setInterval(countdown, 1000);
+
 
 // ---------------- Aufgabe 1_9 -----------------------
 function startTime() {
@@ -109,5 +108,5 @@ function startTime() {
     document.getElementById("txt").innerHTML = current;
 
 }
-
 setInterval(startTime, 1000);
+
