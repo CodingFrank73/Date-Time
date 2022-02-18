@@ -47,6 +47,8 @@ console.log(new Date().getMinutes() + " Minute");
 console.log(wochenTag[new Date().getDay()]);
 console.log(monate[new Date().getMonth()]);
 
+
+
 // ---------------- Aufgabe 1_6 -----------------------
 function show(value) {
 
@@ -77,7 +79,7 @@ function istWeekend(value) {
 
     let date1 = newDate1.getDay();
 
-    if (date1 == 7 || date1 == 0) {
+    if (date1 == 6 || date1 == 0) {
         return "Weekend"
     } else {
         return "Arbeitstag"
