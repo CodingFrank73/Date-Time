@@ -105,10 +105,22 @@ let count = setInterval(countdown, 1000);
 
 // ---------------- Aufgabe 1_9 -----------------------
 function startTime() {
-    let current = new Date().toLocaleString("de-de", { hour: '2-digit', minute: '2-digit', second: '2-digit' });
 
-    document.getElementById("txt").innerHTML = current;
 
+    let current = new Date();
+    let day = new Date().toLocaleString("en-us", { weekday: 'short' });
+
+    let stunde = current.getHours().toString().padStart(2, '0');
+    let minute = current.getMinutes().toString().padStart(2, '0');
+    let sekunde = current.getSeconds().toString().padStart(2, '0');
+
+    let zeit = `${stunde} :\xa0${minute} \xa0:\xa0\xa0 ${sekunde}`;
+    let a = `HOURS\xa0\xa0\xa0\xa0MINUTES\xa0\xa0\xa0\xa0SECONDS`;
+
+    document.getElementById("day").innerHTML = day;
+    document.getElementById("hour").innerHTML = zeit;
+    document.getElementById("t").innerHTML = a;
+    document.getElementById("period").innerHTML = (current.getHours() < 12) ? "AM" : "PM";
 }
 setInterval(startTime, 1000);
 

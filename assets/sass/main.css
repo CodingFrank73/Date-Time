@@ -4,20 +4,33 @@
   box-sizing: border-box;
 }
 
+p, div {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 0.5rem;
+}
+
 .outFrame {
   width: 70%;
   background-color: black;
   padding: 10% 5%;
 }
 .outFrame .innerFrame {
-  border-top: 5px solid white;
-  border-bottom: 5px solid white;
-  border-left: 10px solid white;
-  border-right: 10px solid white;
   border-radius: 6px;
-  padding: 4%;
+  padding: 2% 3%;
+  background-color: #fff;
 }
-.outFrame #txt {
-  padding: 4% 7%;
-  color: #fff;
+.outFrame .innerFrame .values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  padding: 4% 0;
+  background-color: #000;
+  border-radius: 6px;
+}
+.outFrame .innerFrame .values div {
+  font-size: 1.1rem;
 }/*# sourceMappingURL=main.css.map */
